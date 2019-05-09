@@ -27,7 +27,7 @@
   become: true
   become_user: synapse
   notify:
-    - "restart synapse"
+    - "restart matrix-synapse"
 
 - name: create logging folder
   file:
@@ -55,7 +55,7 @@
     owner: synapse
     group: synapse
   notify:
-    - "restart synapse"
+    - "restart matrix-synapse"
 
 - name: Deploy config
   template:
@@ -64,7 +64,7 @@
     owner: synapse
     group: synapse
   notify:
-    - "restart synapse"
+    - "restart matrix-synapse"
 
 - name: ensure hook directory available
   file:
